@@ -1,0 +1,14 @@
+rules_version = '2';
+service cloud.firestore {
+  match /databases/{database}/documents {
+    match /chat-messages/{documents=**} {
+      allow read : if request.auth.token.email_verified;
+      allow write : if request.auth.token.email_verified 
+      && request.resource.data.Sender.uid == request.auth.uid
+      && request.resource.data.msg != null
+      && request.resource.data.createdAt != null
+      && request.resource.data.Sender.email == request.auth.token.email
+      && request.resource.data.Sender.name == request.auth.token.name;
+    }
+  }
+}
