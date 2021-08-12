@@ -2,7 +2,8 @@
   "scripts": {
     "start": "snowpack dev",
     "build": "snowpack build",
-    "test": "web-test-runner --watch --puppeteer \"src/**/*.test.tsx\"",
+    "test": "web-test-runner --puppeteer \"src/**/*.test.tsx\"",
+    "test:watch": "web-test-runner --watch --puppeteer \"src/**/*.test.tsx\"",
     "format": "prettier --write \"src/**/*.{js,jsx,ts,tsx}\"",
     "lint": "prettier --check \"src/**/*.{js,jsx,ts,tsx}\""
   },
