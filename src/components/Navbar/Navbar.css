@@ -1,0 +1,52 @@
+.Navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px 16px;
+  backdrop-filter: blur(10px);
+  user-select: none;
+  position: relative;
+  background-color: #00000046;
+  border-bottom: 2px solid #616161;
+  box-shadow: 0 4px 20px #00000088;
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+.Navbar.loading::after {
+  content: '';
+  width: 100%;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  height: 2px;
+  background: linear-gradient(
+    to right,
+    transparent,
+    var(--primary),
+    transparent
+  );
+}
+.signin-button {
+  color: white;
+  display: flex;
+  align-items: center;
+  padding: 2px;
+  border-radius: 8px;
+  margin: auto;
+  height: 100%;
+}
+.signin-button:active {
+  opacity: 0.75;
+}
+.signin-button svg {
+  height: 24px;
+}
+.Navbar .around {
+  width: 32px;
+  height: 32px;
+}
+.Navbar .Navbar-title {
+  font-size: 1.25rem;
+  font-weight: 500;
+}

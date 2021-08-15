@@ -1,5 +1,10 @@
-.App h2 {
-  font-weight: black;
-  font-size: 2rem;
-  text-align: center;
+.App {
+  background: url('/images/background.jpg');
+  background-color: #01010148;
+  background-size: cover;
+  background-position: center;
+  background-blend-mode: multiply;
+  background-attachment: fixed;
+  min-height: 100vh;
+  color: white;
 }
